@@ -6,3 +6,5 @@ This application is basically a 🍬 wrapper around
 # ToDo
 - use cobra
 - validate image url
+- Add Makefile and compile the CLI
+- Write README Docs

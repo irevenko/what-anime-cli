@@ -10,15 +10,10 @@ import (
 
 	"github.com/briandowns/spinner"
 	helpers "github.com/irevenko/what-anime-cli/helpers"
+	types "github.com/irevenko/what-anime-cli/types"
 )
 
-type Response struct {
-	Docs []struct {
-		TitleRomanji string  `json:"title_romaji"`
-		Similarity   float64 `json:"similarity"`
-	} `json:"docs"`
-}
-
+// SearchByImageLink is for finding the anime scene by url which end with image file extension like: .jpg or .png
 func SearchByImageLink(imageLink string) {
 	linkSearchURL := "https://trace.moe/api/search?url="
 	s := spinner.New(spinner.CharSets[35], 100*time.Millisecond)
@@ -27,6 +22,7 @@ func SearchByImageLink(imageLink string) {
 
 	reqBody, err := json.Marshal(map[string]string{})
 	helpers.HandleError(err)
+
 	resp, err := http.Post(linkSearchURL+imageLink, "application/json", bytes.NewBuffer(reqBody))
 	helpers.HandleError(err)
 	defer resp.Body.Close()
@@ -34,7 +30,7 @@ func SearchByImageLink(imageLink string) {
 	body, err := ioutil.ReadAll(resp.Body)
 	helpers.HandleError(err)
 
-	var animeResp Response
+	var animeResp types.Response
 	json.Unmarshal(body, &animeResp)
 
 	s.Stop()
