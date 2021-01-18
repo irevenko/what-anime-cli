@@ -4,4 +4,5 @@ This application is basically a 🍬 wrapper around
 
 
 # ToDo
-- fix project structure
+- use cobra
+- validate image url
