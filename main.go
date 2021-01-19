@@ -1,26 +1,17 @@
 package main
 
 import (
-	"flag"
+	"fmt"
+	"os"
 
-	cli "github.com/irevenko/what-anime-cli/cli"
-)
-
-var (
-	imagePath string
-	imageLink string
+	"github.com/irevenko/what-anime-cli/cli"
 )
 
 func main() {
-	flag.StringVar(&imagePath, "f", "", "Anime Image File Path")
-	flag.StringVar(&imageLink, "l", "", "Anime Image Link")
-	flag.Parse()
+	cli.AddCommands()
 
-	if imagePath != "" {
-		cli.SearchByImageFile(imagePath)
+	if err := cli.RootCmd.Execute(); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
-	if imageLink != "" {
-		cli.SearchByImageLink(imageLink)
-	}
-
 }
