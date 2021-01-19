@@ -10,6 +10,7 @@
 
 ### Get Anime By Image Link 🔗
 ```what-anime link https://anime.com/image.png``` <br>
+### powershell trouble
 <em>NOTE</em>: MAKE SURE THAT YOUR LINKS <b>ENDS WITH .IMAGE_FORMAT</b> AND DOESN'T HAVE ANY <b>&</b> CHARS AFTER BECAUSE THIS SYMBOL IS RESERVED BY GOLANG 
 
 ### Supported image extensions 🖼
