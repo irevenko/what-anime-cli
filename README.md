@@ -2,7 +2,7 @@
 <p align="center">> This application is basically a 🍬 wrapper around 
 <a href="https://github.com/soruly/trace.moe">trace.moe </a></p>
 <p align="center">PREVIEW</p>
-<p align="center"><img src="./anime_images/record/preview.gif"></p>
+<p align="center"><img src="./anime_images/record/demo.gif" width="800"></p>
 
 # Usage 🖥
 ### Get Anime By Image File 🗃
