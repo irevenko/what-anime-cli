@@ -17,6 +17,7 @@ import (
 	"github.com/fatih/color"
 	helpers "github.com/irevenko/what-anime-cli/helpers"
 	types "github.com/irevenko/what-anime-cli/types"
+	"github.com/muesli/termenv"
 )
 
 const (
@@ -31,9 +32,15 @@ func SearchByImageFile(imagePath string) {
 		}
 	}
 
+	termenv.HideCursor()
+	defer termenv.ShowCursor()
+
 	s := spinner.New(spinner.CharSets[33], 100*time.Millisecond)
 	s.Prefix = "🔎 Searching for the anime: "
 	s.FinalMSG = color.GreenString("✔️  Found!\n")
+
+	go catchInterrupt(s)
+
 	s.Start()
 
 	imageFile, err := os.Open(imagePath)
