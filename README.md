@@ -2,7 +2,7 @@
 <p align="center">> This application is basically a 🍬 wrapper around 
 <a href="https://github.com/soruly/trace.moe">trace.moe </a></p>
 <p align="center">PREVIEW</p>
-<p align="center"><img src="./anime_images/record/demo.gif" width="800"></p>
+<p align="center"><img src="./anime_images/record/demo.gif" width="700"></p>
 
 # Usage 🖥
 ### Get Anime By Image File 🗃
@@ -11,7 +11,7 @@
 ### Get Anime By Image Link 🔗
 ```what-anime link https://anime.com/image.png``` <br>
 ### potential troubles
-Just escpape the link with quotes ```"https://anime.com.anime.png&..."
+Just escpape the link with quotes <b>"</b>https://anime.com.anime.png&...<b>"</b>
 
 ### Supported image extensions 🖼
 I've tested these:
@@ -23,7 +23,9 @@ I've tested these:
 If you have found other's working formats please create an issue
 
 # Installation 🔨
-Build from source or go to <a href="https://github.com/irevenko/what-anime-cli/tree/main/bin">bin</a> folder and pick your executable file
+- Build from source or
+- <a href="https://mega.nz/folder/Dvh1UQgI#KqgrTfCejVPvr8T21AmYQA">Download exutable files </a>
+
 
 # Contributing 🤝
 Contributions, issues and feature requests are welcome! 👍 <br>
