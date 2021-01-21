@@ -24,7 +24,7 @@ If you have found other's working formats please create an issue
 
 # Installation 🔨
 - Build from source or
-- <a href="https://mega.nz/folder/Dvh1UQgI#KqgrTfCejVPvr8T21AmYQA">Download exutable files </a>
+- <a href="https://mega.nz/folder/Dvh1UQgI#KqgrTfCejVPvr8T21AmYQA">Download executable files </a>
 
 
 # Contributing 🤝
