@@ -10,14 +10,15 @@
 
 ### Get Anime By Image Link 🔗
 ```what-anime link https://anime.com/image.png``` <br>
-### powershell trouble
-<em>NOTE</em>: MAKE SURE THAT YOUR LINKS <b>ENDS WITH .IMAGE_FORMAT</b> AND DOESN'T HAVE ANY <b>&</b> CHARS AFTER BECAUSE THIS SYMBOL IS RESERVED BY GOLANG 
+### potential troubles
+Just escpape the link with quotes ```"https://anime.com.anime.png&..."
 
 ### Supported image extensions 🖼
 I've tested these:
 - jpg
 - png
 - jfif
+- webp
 
 If you have found other's working formats please create an issue
 
