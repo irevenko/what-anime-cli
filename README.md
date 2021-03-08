@@ -23,8 +23,9 @@ I've tested these:
 If you have found other's working formats please create an issue
 
 # Installation 🔨
-- Build from source or
-- <a href="https://mega.nz/folder/Dvh1UQgI#KqgrTfCejVPvr8T21AmYQA">Download executable files </a>
+- Build from source
+- <a href="https://aur.archlinux.org/packages/what-anime-cli-git/">AUR package</a>
+- <a href="https://mega.nz/folder/Dvh1UQgI#KqgrTfCejVPvr8T21AmYQA">Download executable files</a>
 
 
 # Contributing 🤝
