@@ -4,6 +4,11 @@
 <p align="center">PREVIEW</p>
 <p align="center"><img src="./anime_images/record/demo.gif" width="700"></p>
 
+# Installation 🔨
+```go get -u github.com/irevenko/what-anime-cli``` <br>
+```what-anime-cli file ani.png``` <br> <br>
+<a href="https://aur.archlinux.org/packages/what-anime-cli-git/">AUR package</a>
+
 # Usage 🖥
 ### Get Anime By Image File 🗃
 ```what-anime file anime.jpg```
@@ -21,12 +26,6 @@ I've tested these:
 - webp
 
 If you have found other's working formats please create an issue
-
-# Installation 🔨
-- Build from source
-- <a href="https://aur.archlinux.org/packages/what-anime-cli-git/">AUR package</a>
-- <a href="https://mega.nz/folder/Dvh1UQgI#KqgrTfCejVPvr8T21AmYQA">Download executable files</a>
-
 
 # Contributing 🤝
 Contributions, issues and feature requests are welcome! 👍 <br>
