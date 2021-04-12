@@ -24,6 +24,7 @@ I've tested these:
 - png
 - jfif
 - webp
+- gif
 
 If you have found other's working formats please create an issue
 
