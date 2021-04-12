@@ -8,6 +8,7 @@ type Response struct {
 		TitleNative  string  `json:"title_native"`
 		Similarity   float64 `json:"similarity"`
 		Episode      int     `json:"episode"`
+		At           float64 `json:"at"`
 		Season       string  `json:"season"`
 		IsAdult      bool    `json:"is_adult"`
 	} `json:"docs"`
