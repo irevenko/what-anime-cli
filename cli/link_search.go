@@ -63,7 +63,6 @@ func SearchByImageLink(imageLink string) {
 	fmt.Println("📺 Episode Number: " + color.MagentaString(strconv.Itoa(animeResp.Docs[0].Episode)))
 	fmt.Print("⌚ Scene At: ")
 	helpers.PrintSceneAt(animeResp.Docs[0].At)
-	fmt.Println("📅 Year & Season: " + color.CyanString(animeResp.Docs[0].Season))
 	fmt.Print("🍓 Is Adult: ")
 	helpers.PrintIsAdult(animeResp.Docs[0].IsAdult)
 	//fmt.Println(string(body))
