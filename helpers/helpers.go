@@ -3,6 +3,7 @@ package heplers
 import (
 	"fmt"
 	"log"
+	"math"
 
 	"github.com/fatih/color"
 )
@@ -23,6 +24,14 @@ func PrintAnimeSimilarity(similarity string) {
 	} else {
 		fmt.Println(color.RedString(similarity))
 	}
+}
+
+// PrintSceneAt is for HH:MM:SS output
+func PrintSceneAt(at float64) {
+	h := math.Floor(at / 3600)
+	m := math.Floor((at - h * 3600) / 60)
+	s := at - (h * 3600 + m * 60)
+	fmt.Println(color.YellowString("%02.f:%02.f:%02.f", h, m, s))
 }
 
 // PrintIsAdult is for colorful output
