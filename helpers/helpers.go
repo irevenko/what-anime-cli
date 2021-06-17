@@ -26,11 +26,11 @@ func PrintAnimeSimilarity(similarity string) {
 	}
 }
 
-// PrintSceneAt is for HH:MM:SS output
-func PrintSceneAt(at float64) {
+// PrintSceneTime is for HH:MM:SS output
+func PrintSceneTime(at float64) {
 	h := math.Floor(at / 3600)
-	m := math.Floor((at - h * 3600) / 60)
-	s := at - (h * 3600 + m * 60)
+	m := math.Floor((at - h*3600) / 60)
+	s := at - (h*3600 + m*60)
 	fmt.Println(color.YellowString("%02.f:%02.f:%02.f", h, m, s))
 }
 

@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	linkSearchURL = "https://trace.moe/api/search?url="
+	linkSearchURL = "https://api.trace.moe/search?anilistInfo&url="
 )
 
 // SearchByImageLink is for finding the anime scene by url which end with image file extension like: .jpg or .png
@@ -55,15 +55,17 @@ func SearchByImageLink(imageLink string) {
 
 	s.Stop()
 
-	fmt.Println("🌸 Title Native: " + animeResp.Docs[0].TitleNative)
-	fmt.Println("🗻 Title Romaji: " + animeResp.Docs[0].TitleRomanji)
-	fmt.Println("🗽 Title English: " + animeResp.Docs[0].TitleEnglish)
+	fmt.Println("🌸 Title Native:", animeResp.Result[0].Anilist.Title.Native)
+	fmt.Println("🗻 Title Romaji:", animeResp.Result[0].Anilist.Title.Romaji)
+	fmt.Println("🗽 Title English:", animeResp.Result[0].Anilist.Title.English)
 	fmt.Print("📊 Similarity: ")
-	helpers.PrintAnimeSimilarity(strconv.FormatFloat(animeResp.Docs[0].Similarity, 'f', 6, 64))
-	fmt.Println("📺 Episode Number: " + color.MagentaString(strconv.Itoa(animeResp.Docs[0].Episode)))
-	fmt.Print("⌚ Scene At: ")
-	helpers.PrintSceneAt(animeResp.Docs[0].At)
+	helpers.PrintAnimeSimilarity(strconv.FormatFloat(animeResp.Result[0].Similarity, 'f', 6, 64))
+	fmt.Println("📺 Episode Number: " + color.MagentaString(strconv.Itoa(animeResp.Result[0].Episode)))
+	fmt.Print("⌚ Scene From: ")
+	helpers.PrintSceneTime(animeResp.Result[0].From)
+	fmt.Print("⌚ Scene To: ")
+	helpers.PrintSceneTime(animeResp.Result[0].To)
 	fmt.Print("🍓 Is Adult: ")
-	helpers.PrintIsAdult(animeResp.Docs[0].IsAdult)
+	helpers.PrintIsAdult(animeResp.Result[0].Anilist.IsAdult)
 	//fmt.Println(string(body))
 }
