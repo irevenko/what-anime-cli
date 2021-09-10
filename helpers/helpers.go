@@ -18,11 +18,14 @@ func HandleError(err error) {
 // PrintAnimeSimilarity is for colorful output
 func PrintAnimeSimilarity(similarity string) {
 	if similarity > "0.89" {
-		fmt.Println(color.GreenString(similarity))
+		_, err := fmt.Fprintln(color.Output, color.GreenString(similarity))
+		HandleError(err)
 	} else if similarity > "0.80" {
-		fmt.Println(color.YellowString(similarity))
+		_, err := fmt.Fprintln(color.Output, color.YellowString(similarity))
+		HandleError(err)
 	} else {
-		fmt.Println(color.RedString(similarity))
+		_, err := fmt.Fprintln(color.Output, color.RedString(similarity))
+		HandleError(err)
 	}
 }
 
@@ -31,14 +34,17 @@ func PrintSceneTime(at float64) {
 	h := math.Floor(at / 3600)
 	m := math.Floor((at - h*3600) / 60)
 	s := at - (h*3600 + m*60)
-	fmt.Println(color.YellowString("%02.f:%02.f:%02.f", h, m, s))
+	_, err := fmt.Fprintln(color.Output, color.YellowString("%02.f:%02.f:%02.f", h, m, s))
+	HandleError(err)
 }
 
 // PrintIsAdult is for colorful output
 func PrintIsAdult(isAdult bool) {
 	if isAdult == true {
-		fmt.Println(color.GreenString("true"))
+		_, err := fmt.Fprintln(color.Output, color.GreenString("true"))
+		HandleError(err)
 	} else {
-		fmt.Println(color.RedString("false"))
+		_, err := fmt.Fprintln(color.Output, color.RedString("false"))
+		HandleError(err)
 	}
 }
